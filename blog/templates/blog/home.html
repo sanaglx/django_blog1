@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    RRRRR
+{%  endblock %}
+
+{% block content %}
+    <h1>Privet</h1>
+
+    {% for article in articles %}
+        <h4><a href="{% url 'article' article.id  %}">{{ article.title }}</a></h4>
+        <p class ="xx">{{ article.get_short_text }}</p>
+    {% endfor %}
+{% endblock %}
